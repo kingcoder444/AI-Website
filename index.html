@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7692121b9e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="ll">
+        <img src="dice.png" class="lp" style="width:90px; height:120px;">
+    <h1 class="o" >
+       ALL-AI
+    </h1></div>
+    
+    
+  
+<div class="dropdown">
+  <button class="lol">LOG IN</button>
+<div class="no">
+<a href="gen.html">Gen AI</a>
+<a href="vidgen.html">Video generator</a>
+<a href="api.html">API Platform</a>
+</div>
+</div>
+<nav class="nav">
+<ul class="ul">
+<li class="po"><img src="dice.png" style="width:30px; height:30px"></li>
+<br>
+<li><a class="oi" href="">Research</a></li>
+<li><a class="oi" href="">Safety</a></li>
+<li><a class="oi" href="">Partners</a></li>
+<li><a class="oi" href="">Company</a></li>
+<li><a class="oi" href="">News</a></li>
+
+</ul>
+</nav>
+
+<h3 class="h3">Introducing </h3>
+<h3 class="h2">ALL-AI<sub class="sub">model 2.0</sub></h3>
+<button class="button">Try PRO <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+<button class="button2">Try Video Generator <i class="fa-solid fa-video"></i></button>
+
+<h1 class="ss">Try the new technology yourself</h1>
+<h1 class="ss">Try the new technology yourself</h1>
+<div class="search-and-prompts">
+  
+<div class="search-container">
+<input type="text" placeholder="Search..." class="search-box">
+<div class="icons">
+<i class="fa-solid fa-image"></i>
+<i class="fa-solid fa-magnifying-glass"></i>
+</div>
+</div>
+</div>
+
+<div class="carousel">
+<div class="slides">
+<div class="slide">"Write a motivational email from a CEO to employees before a product launch."</div>
+<div class="slide">"Create a short video script introducing a magical AI pet that talks and learns from its owner."</div>
+<div class="slide">"Generate an image of a futuristic floating city at sunset, with neon lights and flying cars."</div>
+</div>
+        
+<div class="indicators">
+<div class="indicator active" data-index="0"></div>
+<div class="indicator" data-index="1"></div>
+<div class="indicator" data-index="2"></div>
+</div></div>
+
+<script>
+const slides = document.querySelector('.slides');
+const indicators = document.querySelectorAll('.indicator');
+let currentIndex = 0;
+const slideCount = 3;
+        
+function goToSlide(index) {
+currentIndex = index;
+slides.style.transform = `translateX(-${currentIndex * 300}px)`;
+            
+indicators.forEach((indicator, i) => {
+indicator.classList.toggle('active', i === currentIndex);
+});
+}
+function nextSlide() {
+currentIndex = (currentIndex + 1) % slideCount;
+goToSlide(currentIndex);
+}
+        
+        
+        
+
+setInterval(nextSlide, 3000);
+        
+indicators.forEach(indicator => {
+indicator.addEventListener('click', () => {
+const index = parseInt(indicator.getAttribute('data-index'));
+goToSlide(index);
+ });
+});
+</script>
+
+<h2 class="e">Exciting prompts to try</h2>
+</body>
+</html>
